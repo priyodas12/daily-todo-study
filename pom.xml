@@ -15,6 +15,7 @@
         <annotation-api.version>1.3.2</annotation-api.version>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
+        <servlet-api.version>3.1.0</servlet-api.version>
     </properties>
     <dependencies>
         <!-- lombok -->
@@ -43,6 +44,14 @@
             <artifactId>javax.annotation-api</artifactId>
             <version>${annotation-api.version}</version>
         </dependency>
+        <!-- javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
