@@ -43,8 +43,34 @@
             <artifactId>javax.annotation-api</artifactId>
             <version>${annotation-api.version}</version>
         </dependency>
-
-
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <version>1.7.6</version>
+                <configuration>
+                    <container>
+                        <containerId>tomcat9x</containerId>
+                        <type>embedded</type>
+                    </container>
+                    <configuration>
+                        <properties>
+                            <cargo.servlet.port>9080</cargo.servlet.port>
+                        </properties>
+                    </configuration>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
