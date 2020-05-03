@@ -15,7 +15,7 @@ public class InitController {
         return "Starting Spring MVC!";
     }
     /*http://localhost:9080/daily-todo-study/api/welcome*/
-    @GetMapping("welcome")
+    @GetMapping("/welcome")
     public String welcome(){
         return "welcome";
     }
