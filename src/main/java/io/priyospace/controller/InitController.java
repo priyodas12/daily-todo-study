@@ -5,10 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @Controller
@@ -31,10 +28,10 @@ public class InitController {
         return "Starting Spring MVC!";
     }
 
-    /*http://localhost:9080/daily-todo-study/api/welcome*/
+    /*http://localhost:9080/daily-todo-study/api/welcome?user=priyo*/
     @GetMapping("/welcome")
-    public String welcome(Model model){
-        model.addAttribute("helloMessage",demoService.getHelloMessage("priyo"));
+    public String welcome(@RequestParam String user, Model model){
+        model.addAttribute("helloMessage",demoService.getHelloMessage(user));
         log.info("model {}",model);
         return "welcome";
     }
