@@ -35,6 +35,7 @@ public class InitController {
         log.info("model {}",model);
         return "welcome";
     }
+
     //this will be called first before any other method.
     @ModelAttribute("welcomeMessage")
     public String welcomeMessage(){
