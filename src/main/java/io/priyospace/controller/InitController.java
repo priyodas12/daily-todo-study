@@ -12,6 +12,11 @@ public class InitController {
     @ResponseBody
     @GetMapping("/hello")
     public String hello(){
-        return "Hello";
+        return "Starting Spring MVC!";
+    }
+    /*http://localhost:9080/daily-todo-study/api/welcome*/
+    @GetMapping("welcome")
+    public String welcome(){
+        return "welcome";
     }
 }
