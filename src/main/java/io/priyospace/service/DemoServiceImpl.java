@@ -10,11 +10,11 @@ public class DemoServiceImpl implements DemoService{
     //model methods
     @Override
     public String getHelloMessage(String user) {
-        return "Hello "+user+" now "+new Date();
+        return "Hello "+user;
     }
 
     @Override
     public String getWelcomeMessage() {
-        return "Welcome to this service demo app!";
+        return "Welcome to this service demo app!"+" on "+new Date();
     }
 }
