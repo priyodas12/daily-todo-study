@@ -2,6 +2,7 @@ package io.priyospace.model;
 
 import lombok.NonNull;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,7 +19,9 @@ public class TodoData {
     //constructor
     public TodoData() {
         //add some dummy data
-
+        addItem(new TodoItems("first","firstname", LocalDate.now()));
+        addItem(new TodoItems("second","secondname", LocalDate.now()));
+        addItem(new TodoItems("third","thirdname", LocalDate.now()));
     }
 
     //public methods
